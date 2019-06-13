@@ -2,6 +2,10 @@
   "name": "js-scope-and-closure-ppt",
   "description": "JavaScript执行上下文与闭包",
   "homepage": "https://sinoui.github.io/js-scope-and-closure-ppt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sinoui/js-scope-and-closure-ppt.git"
+  },
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
