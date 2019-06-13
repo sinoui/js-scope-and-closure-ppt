@@ -40,3 +40,44 @@ function Demo() {
 ```
 
 ## 第五题：解释一下`useEffect`、`useCallback`、`useMemo`的第二个参数的主要作用，并尝试找出一些共性。
+
+## 第六题：使用 React Hooks 声明 setInterval。
+
+使用方式如下：
+
+```tsx
+function Counter() {
+  const [delay, setDelay] = useState(1000);
+  const [count, setCount] = useState(0);
+
+  // Increment the counter.
+  useInterval(() => {
+    setCount(count + 1);
+  }, delay);
+
+  // Make it faster every second!
+  useInterval(() => {
+    if (delay > 10) {
+      setDelay(delay / 2);
+    }
+  }, 1000);
+
+  function handleReset() {
+    setDelay(1000);
+  }
+
+  return (
+    <>
+      <h1>Counter: {count}</h1>
+      <h4>Delay: {delay}</h4>
+      <button onClick={handleReset}>
+        Reset delay
+      </button>
+    </>
+  );
+}
+```
+
+效果图如下：
+
+![](./img/counter_inception.gif)
