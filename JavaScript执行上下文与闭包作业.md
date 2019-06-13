@@ -80,4 +80,4 @@ function Counter() {
 
 效果图如下：
 
-![](./img/counter_inception.gif)
+![](img/counter_inception.gif)
