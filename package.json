@@ -1,0 +1,22 @@
+{
+  "name": "js-scope-and-closure-ppt",
+  "description": "JavaScript执行上下文与闭包",
+  "homepage": "https://sinoui.github.io/js-scope-and-closure-ppt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "code-surfer": "^2.0.0-alpha.4",
+    "gh-pages": "^2.0.1",
+    "mdx-deck": "^2.3.2",
+    "prism-react-renderer": "^0.1.6",
+    "raw-loader": "^3.0.0",
+    "styled-components": "^4.3.1"
+  },
+  "scripts": {
+    "start": "mdx-deck index.mdx",
+    "build": "mdx-deck build index.mdx",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  }
+}
