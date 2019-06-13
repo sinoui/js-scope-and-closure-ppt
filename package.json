@@ -16,11 +16,12 @@
     "mdx-deck": "^2.3.2",
     "prism-react-renderer": "^0.1.6",
     "raw-loader": "^3.0.0",
+    "rimraf": "^2.6.3",
     "styled-components": "^4.3.1"
   },
   "scripts": {
     "start": "mdx-deck index.mdx",
-    "build": "mdx-deck build index.mdx  --basepath=\"/js-scope-and-closure-ppt\" && cpr images dist/images",
+    "build": "rimraf dist && mdx-deck build index.mdx --basepath=\"/js-scope-and-closure-ppt\" && cpr img dist/img",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
   }

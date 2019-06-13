@@ -8,7 +8,7 @@ export { nightOwlFull as theme } from 'code-surfer/themes';
 
 <CodeSurferLayout>
 
-```js
+```js title="这段代码的执行结果是什么？"
 var value = 'global value';
 function alertValue() {
   alert(value);
@@ -448,7 +448,7 @@ alertValue();
 
 ---
 
-![](./images/execution-context.png)
+![](./img/execution-context.png)
 
 <ul>
   <Appear>
@@ -637,7 +637,7 @@ console.log(value);
 
 作用域链类似链表的一个结构：
 
-![](./images/scope-chain.png)
+![](./img/scope-chain.png)
 
 ---
 
@@ -667,23 +667,23 @@ console.log(value);
 
 ### console.dir(alertValue)
 
-![](./images/alert-value-dir.png)
+![](./img/alert-value-dir.png)
 
 展开 global scope，发现：
 
-![](./images/alert-value-dir-global-value.png)
+![](./img/alert-value-dir-global-value.png)
 
 ---
 
 ### console.dir(inner)
 
-![](./images/inner-fn-dir.png)
+![](./img/inner-fn-dir.png)
 
 ---
 
 ### console.dir(inner)
 
-![](./images/inner-fn-dir-2.png)
+![](./img/inner-fn-dir-2.png)
 
 ---
 
