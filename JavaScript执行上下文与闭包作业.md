@@ -18,24 +18,25 @@
 ## 第四题：看看下面的useCallback是否使用正确。如果有问题，请说明你的判断依据，并修复之。
 
 ```tsx
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 function Demo() {
-    const [users, setUsers] = useState([]);
-    
-    const addUsers = useCallback((user) => {
-        setUsers([..users, user]);
-    }, []);
-    
-    useEffect(() => {
-        fetch('/users').then(response => response.json()).then(response => {
-            serUsers(response);
-        });
-    }, []);
-    
-    return <div>
-        <UserList users={users} />
-    	<AddUserForm handleAdd={addUsers} />
-    </div>;
+  const [users, setUsers] = useState([]);
+
+  const addUsers = useCallback((user) => {
+    setUsers([..users, user]);
+  }, []);
+
+  useEffect(() => {
+    fetch('/users').then(response => response.json()).then(response => {
+      setUsers(response);
+    });
+  }, []);
+
+  return <div>
+    <UserList users={users} />
+    <AddUserForm handleAdd={addUsers} />
+  </div>;
 }
 ```
 
+## 第五题：解释一下`useEffect`、`useCallback`、`useMemo`的第二个参数的主要作用，并尝试找出一些共性。
